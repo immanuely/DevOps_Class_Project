@@ -4,22 +4,18 @@ date: 2019-02-01
 tags: ["kubernetes", "code"]
 ---
 
-First application on Kubernetes using Kubernetes deployments
+# First Application on Kubernetes
 
-<!--more-->
+This guide demonstrates how to deploy your first application on Kubernetes using Kubernetes deployments.
 
-sh
-    kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
+## Prerequisites
 
+- You should have a Kubernetes cluster set up and `kubectl` configured to interact with it.
+- Ensure you have access to the `gcr.io/google-samples/kubernetes-bootcamp:v1` image.
 
-Now, check whether it is running:
-sh
-    kubectl get pods
-    NAME                                   READY     STATUS    RESTARTS   AGE
-    kubernetes-bootcamp-5c69669756-wv2rp   1/1       Running   0          11s
+## Step 1: Deploy the Application
 
+Run the following command to deploy the application:
 
-We can check application logs:
-sh
-kubectl logs kubernetes-bootcamp-5c69669756-wv2rp
-Kubernetes Bootcamp App Started At: 2018-10-20T13:38:41.537Z | Running On:  kubernetes-bootcamp-5c69669756-wv2rp
+```sh
+kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
