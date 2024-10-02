@@ -4,18 +4,15 @@ date: 2019-02-01
 tags: ["kubernetes", "code"]
 ---
 
-# First Application on Kubernetes
+# Aplikasi Pertama di Kubernetes Menggunakan Kubernetes Deployments
 
-This guide demonstrates how to deploy your first application on Kubernetes using Kubernetes deployments.
+Panduan ini menunjukkan cara menjalankan aplikasi pertama di Kubernetes dengan menggunakan Kubernetes deployments.
 
-## Prerequisites
+<!--more-->
 
-- You should have a Kubernetes cluster set up and `kubectl` configured to interact with it.
-- Ensure you have access to the `gcr.io/google-samples/kubernetes-bootcamp:v1` image.
+## Jalankan Deployment
 
-## Step 1: Deploy the Application
+Jalankan perintah berikut untuk membuat deployment:
 
-Run the following command to deploy the application:
-
-```sh
+```bash
 kubectl run kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1 --port=8080
